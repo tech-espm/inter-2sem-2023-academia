@@ -12,6 +12,18 @@ class IndexRoute {
 		res.render("index/index", opcoes);
 	}
 
+	public async sobre(req: app.Request, res: app.Response) {
+		res.render("index/sobre");
+	}
+
+	public async consulta(req: app.Request, res: app.Response) {
+		res.render("index/consulta");
+	}
+
+	public async agendamento(req: app.Request, res: app.Response) {
+		res.render("index/agendamento");
+	}
+
 	public async teste(req: app.Request, res: app.Response) {
 		let opcoes = {
 			layout: "casca-teste"
