@@ -1,3 +1,43 @@
-<p>
-	Agendamento
-</p>
+<div class="container-fluid secao1">
+	<div class="row">
+		<div class="col-sm-6">
+			<div id="blocoTextoS1">
+				<h1 class="titulo text-center">Agendamento</h1>
+
+				<form action="" id="formAgendamento">
+					<div class="form-group">
+						<label for="aulaSelect" class="labels">Aula</label>
+						<select class="form-control" name="" id="aulaSelect">
+							<option value=""></option>
+							<option value="">Yoga</option>
+							<option value="">Pilates</option>
+							<option value="">Spinning</option>
+							<option value="">Alongamento</option>
+						</select>
+					</div>
+
+					<label for="dataInput" class="labels">Data:
+						<input class="form-control" type="date">
+					</label>
+
+					Horário:
+					<label for="horarioInput" class="labels">
+						início:
+						<select class="form-control" name="" id="horarioInicio">
+							<option value=""></option>	
+						</select>
+						fim:
+						<select name="" id="horarioFim" class="form-control">
+							<option value=""></option>
+						</select>
+							
+					</label>
+					
+					<input class="form-control" type="submit" value="Agendar" id="botaoAgendar">
+					
+				</form>
+			</div>
+		</div>
+		<div class="col-sm-6"></div>
+	</div>
+</div>
