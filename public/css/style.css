@@ -26,10 +26,88 @@
     margin-top: 0.1rem;
 }
 
-.secao1 {
+.secao1-agendamento {
     background-image: url(/public/imagens/transferir.jpg);
     min-height: 100vh;
     box-sizing: border-box;
     background-position: center;
     background-size: cover;
+}
+
+/*HOME PAGE*/
+
+.secao1-home {
+    background-image: url(/public/imagens/img1home.png);
+    padding: 200px 25px;
+    background-size: cover;
+    background-position: center top;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.span1 {
+    color: blue;
+}
+
+.caixa-texto-home1 {
+    background-color: rgba(110, 109, 109, 0.8);
+    color: white;
+    padding: 10px;
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+.texto1-home {
+    padding-left: 1rem;
+}
+
+.secao2-home {
+    align-items: center;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.secao2-home h1 {
+    color: blue;
+}
+
+.span2 {
+    font-size: 4rem;
+}
+
+.button1-home {
+    color: white;
+    background-color: blue;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: .75rem 1rem;
+    width: 200px;
+    height: 50px;
+}
+
+.caixa-texto-home2 {
+    background-color: rgba(110, 109, 109, 0.8);
+    color: white;
+    padding: 10px;
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+.secao3-home {
+    background-image: url(/public/imagens/img2home.png);
+    padding: 200px 25px;
+    background-size: cover;
+    background-position: center top;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
