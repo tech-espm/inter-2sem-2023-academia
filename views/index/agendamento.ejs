@@ -1,12 +1,12 @@
-<div class="container-fluid secao1">
+<div class="container-fluid secao1-agendamento">
 	<div class="row">
-		<div class="col-sm-6">
+		<div class="col-sm-12">
 			<div id="blocoTextoS1">
-				<h1 class="titulo text-center">Agendamento</h1>
+				<h1 class="titulo text-left">Agendamento</h1>
 
 				<form action="" id="formAgendamento" >
 					<div class="form-group">
-						<label for="aulaSelect" class="labels">Aula</label>
+						<label for="aulaSelect" class="labels">Aula:</label>
 						<select class="form-control" name="aula" id="aulaSelect">
 							<option value=""></option>
 							<option value="1">Yoga</option>
@@ -20,12 +20,14 @@
 						<input class="form-control" type="date" name="data">
 					</label>
 
-					Horário:
-					<label for="horarioInput" class="labels">
+					<p class="labels">Horário:</p>
+					<label for="horarioInicio" class="labels">
 						início:
 						<select class="form-control" name="hora1" id="horarioInicio">
 							<option value=""></option>	
 						</select>
+					</label>
+					<label for="horarioFim" class="labels">
 						fim:
 						<select name="hora2" id="horarioFim" class="form-control">
 							<option value=""></option>
@@ -33,7 +35,7 @@
 							
 					</label>
 					
-					<button class="btn btn-primary" type="submit">
+					<button class="btn btn-success" type="submit">
 						Cadastrar
 					</button>
 					

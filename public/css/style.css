@@ -1,6 +1,5 @@
 .limitador {
     max-width: 1260px;
-    min-height: 100vh;
     margin: 0 auto;
     box-shadow: 0 0 1rem;
 }
@@ -8,6 +7,7 @@
 #formAgendamento {
     display: flex;
     flex-direction: column;
+
 }
 
 .perfil {
@@ -26,10 +26,20 @@
     margin-top: 0.1rem;
 }
 
-.secao1 {
-    background-image: url(/public/imagens/fundocalendario.png);
+.secao1-agendamento {
+    padding: 2rem 3rem;
+    background-image: url(/public/imagens/transferir.jpg);
     min-height: 100vh;
     box-sizing: border-box;
     background-position: center;
     background-size: cover;
+}
+
+.labels {
+    font-weight: bold;
+}
+
+#blocoTextoS1 {
+    color: whitesmoke;
+    max-width: 50%;
 }
