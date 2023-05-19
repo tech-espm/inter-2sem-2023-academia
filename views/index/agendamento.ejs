@@ -4,40 +4,76 @@
 			<div id="blocoTextoS1">
 				<h1 class="titulo text-center">Agendamento</h1>
 
-				<form action="" id="formAgendamento">
+				<form action="" id="formAgendamento" >
 					<div class="form-group">
 						<label for="aulaSelect" class="labels">Aula</label>
-						<select class="form-control" name="" id="aulaSelect">
+						<select class="form-control" name="aula" id="aulaSelect">
 							<option value=""></option>
-							<option value="">Yoga</option>
-							<option value="">Pilates</option>
-							<option value="">Spinning</option>
-							<option value="">Alongamento</option>
+							<option value="1">Yoga</option>
+							<option value="2">Pilates</option>
+							<option value="3">Spinning</option>
+							<option value="4">Alongamento</option>
 						</select>
 					</div>
 
 					<label for="dataInput" class="labels">Data:
-						<input class="form-control" type="date">
+						<input class="form-control" type="date" name="data">
 					</label>
 
 					Horário:
 					<label for="horarioInput" class="labels">
 						início:
-						<select class="form-control" name="" id="horarioInicio">
+						<select class="form-control" name="hora1" id="horarioInicio">
 							<option value=""></option>	
 						</select>
 						fim:
-						<select name="" id="horarioFim" class="form-control">
+						<select name="hora2" id="horarioFim" class="form-control">
 							<option value=""></option>
 						</select>
 							
 					</label>
 					
-					<input class="form-control" type="submit" value="Agendar" id="botaoAgendar">
+					<button class="btn btn-primary" type="submit">
+						Cadastrar
+					</button>
 					
 				</form>
 			</div>
 		</div>
-		<div class="col-sm-6"></div>
 	</div>
 </div>
+
+<script src="/public/js/jquery-validate/jquery.validate.min.js"></script>
+<script src="/public/js/jquery-validate/additional-methods.min.js"></script>
+<script src="/public/js/jquery-validate/localization/messages_pt_BR.min.js"></script>
+
+<script>
+	async function cadastrar(form) {
+		let response = await fetch("/api/aula/criar", {
+			method: "post",
+			body: new FormData(form)
+		});
+
+		console.log(response.ok);
+	}
+
+	$("#formAgendamento").validate({
+		rules: {
+			aula: {
+				required: true
+			},
+			data: {
+				required: true
+			},
+			hora1: {
+				required: true
+			},
+			hora2: {
+				required: true
+			}
+		},
+		submitHandler: function (form) {
+			cadastrar(form);
+		}
+	});
+</script>
