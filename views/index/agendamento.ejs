@@ -1,6 +1,6 @@
 <div class="container-fluid secao1-agendamento">
 	<div class="row">
-		<div class="col-sm-12">
+		<div class="col-sm-6">
 			<div id="blocoTextoS1">
 				<h1 class="titulo text-left">Agendamento</h1>
 
@@ -8,7 +8,7 @@
 					<div class="form-group">
 						<label for="aulaSelect" class="labels">Aula:</label>
 						<select class="form-control" name="aula" id="aulaSelect">
-							<option value=""></option>
+							<option value="">Selecione a aula:</option>
 							<option value="1">Yoga</option>
 							<option value="2">Pilates</option>
 							<option value="3">Spinning</option>
@@ -21,19 +21,32 @@
 					</label>
 
 					<p class="labels">Horário:</p>
-					<label for="horarioInicio" class="labels">
-						início:
-						<select class="form-control" name="hora1" id="horarioInicio">
-							<option value=""></option>	
+
+					<div class="container-fluid row">
+						<label for="col-sm-2" class="labels" style="padding:0 0.7rem;">
+							início:
+						</label>
+						<select class="form-control col-sm-2" name="hora1h" id="horarioInicioHora" >
+							<option value="1"></option>	
 						</select>
-					</label>
-					<label for="horarioFim" class="labels">
-						fim:
-						<select name="hora2" id="horarioFim" class="form-control">
-							<option value=""></option>
+						<span style="padding: 0.5rem;">:</span>
+						<select class="form-control col-sm-2" name="hora1m" id="horarioInicioMinuto">
+							<option value="1"></option>	
 						</select>
-							
-					</label>
+						<label for=" col-sm-2" class="labels" style="padding:0 0.7rem;">
+							fim:
+						</label>
+						<select class="form-control col-sm-2" name="hora2h" id="horarioFimHora" >
+							<option value="1"></option>	
+						</select>
+						<span style="padding: 0.5rem;">:</span>
+						<select class="form-control col-sm-2" name="hora2m" id="horarioFimMinuto">
+							<option value="1"></option>	
+						</select>
+					</div>
+					
+					
+				
 					
 					<button class="btn btn-success" type="submit">
 						Cadastrar
