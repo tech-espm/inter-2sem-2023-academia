@@ -19,7 +19,7 @@
 		@keyframes animacao-titulo {
 			0% {
 				opacity: 0;
-				transform: translateY(-20px);
+				transform: translateY(-1.25rem);
 			}
 
 			100% {
@@ -33,7 +33,7 @@
 			font-size: 1.1rem;
 			margin-bottom: 20rem;
 			text-align: center;
-			animation: animacao-titulo 1s ease-out
+			animation: animacao-titulo 1s ease-out;
 		}
 
 		.perfil {
@@ -67,19 +67,21 @@
 			opacity: 1;
 		}
 
-		.linkedin-button {
-			display: inline-block;
-			width: 60px;
-			height: 60px;
-			border-radius: 50%;
-			background-color: #0077B5;
-			overflow: hidden;
+		.botao {
+			display: inline-flex;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 1rem;
 		}
 
-		.linkedin-button img {
-			width: 100%;
-			height: 100%;
-			object-fit: fill;
+		.linkedin {
+			background-image: url(/public/imagens/LinkedIn.png);
+			max-width: 100%;
+		}
+
+		.github {
+			background-color: white;
+			background-image: url(/public/imagens/github-mark.png);
 		}
 	</style>
 
@@ -90,8 +92,8 @@
 	<h1 class="titulo">Sobre nós</h1>
 
 	<h3 class="descricao">
-		Nesta página teremos uma breve apresentação de todos os integrantes desse grupo,
-		desça a página para começar.
+		Nesta página temos uma breve apresentação de todos os integrantes desse grupo, além de uma história acadêmica de
+		cada um. Desça a página para começar
 	</h3>
 
 	<div class="container-fluid">
@@ -123,10 +125,17 @@
 					</p>
 
 					<p>
-						<a href="https://www.linkedin.com/in/brunoaly" target="_blank"
-							rel="noopener noreferrer" class="linkedin-button">
-							<img src="/public/imagens/linkedin.jpg" alt="LinkedIn" />
+
+						<a href="https://www.linkedin.com/in/brunoaly" target="_blank" rel="noopener noreferrer"
+							class="botao linkedin scroll-trigger">
+							<img src="/public/imagens/LinkedIn.png" alt="botao" />
 						</a>
+
+						<a href="https://www.github.com/brunoaly" target="_blank" rel="noopener noreferrer"
+							class="botao scroll-trigger github">
+							<img src="/public/imagens/github-mark.png" alt="botao" />
+						</a>
+
 					</p>
 
 				</div>
@@ -154,6 +163,20 @@
 						para programação e tomou a decisão de sair da engenharia para algo que focasse de forma mais
 						efetiva no assunto que mais lhe agradava, após pesquisar e estudar as opções viu que Sistemas de
 						Informação na ESPM seria sua melhor escolha.
+					</p>
+
+					<p>
+
+						<a href="https://www.linkedin.com/in/luiz-guilherme-machado-bueno-pereira-6a54431a3/"
+							target="_blank" rel="noopener noreferrer" class="botao linkedin scroll-trigger">
+							<img src="/public/imagens/LinkedIn.png" alt="botao" />
+						</a>
+
+						<a href="https://www.github.com/brunoaly" target="_blank" rel="noopener noreferrer"
+							class="botao scroll-trigger github">
+							<img src="/public/imagens/github-mark.png" alt="botao" />
+						</a>
+
 					</p>
 
 				</div>
@@ -193,11 +216,24 @@
 						Durante o 1º ano de curso, João se apaixonou pela tecnologia e decidiu trancar o curso. Após um
 						semestre esperando, João prestou o vestibular da ESPM e foi aprovado, ganhando 60% de bolsa
 						devido à sua excelência acadêmica.
+
+					</p>
+
+					<p>
+
+						<a href="https://www.linkedin.com/in/jo%C3%A3o-caldas-2258a5231/" target="_blank"
+							rel="noopener noreferrer" class="botao linkedin scroll-trigger">
+							<img src="/public/imagens/LinkedIn.png" alt="botao" />
+						</a>
+
+						<a href="https://www.github.com/joaopedrocaldas" target="_blank" rel="noopener noreferrer"
+							class="botao scroll-trigger github">
+							<img src="/public/imagens/github-mark.png" alt="botao" />
+						</a>
+
 					</p>
 
 				</div>
-
-				</p>
 
 			</div>
 
