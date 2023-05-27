@@ -4,10 +4,18 @@
 			<div id="blocoTextoS1">
 				<h1 class="titulo text-left">Agendamento</h1>
 
-				<form action="" id="formAgendamento" >
+				<form id="formAgendamento" >
 					<div class="form-group">
-						<label for="aulaSelect" class="labels">Aula:</label>
-						<select class="form-control" name="aula" id="aulaSelect">
+						<label for="idprofessor" class="labels">Professor:</label>
+						<select class="form-control" name="idprofessor" id="idprofessor">
+							<option value="">Selecione o professor:</option>
+							<option value="1">Flavio</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="idtipo" class="labels">Aula:</label>
+						<select class="form-control" name="idtipo" id="idtipo">
 							<option value="">Selecione a aula:</option>
 							<option value="1">Yoga</option>
 							<option value="2">Pilates</option>
@@ -16,10 +24,10 @@
 						</select>
 					</div>
 
-					<label for="dataInput" class="labels">Data:
-						<input class="form-control" type="date" name="data">
+					<label for="data" class="labels">Data:
+						<input class="form-control" type="datetime-local" name="data" id="data">
 					</label>
-
+<!--
 					<p class="labels">Horário:</p>
 
 					<div class="container-fluid row">
@@ -44,7 +52,7 @@
 							<option value="1"></option>	
 						</select>
 					</div>
-					
+				-->
 					
 				
 					
@@ -64,26 +72,38 @@
 
 <script>
 	async function cadastrar(form) {
+		let aula = {
+			idprofessor: document.getElementById("idprofessor").value,
+			idtipo: document.getElementById("idtipo").value,
+			data: document.getElementById("data").value
+		};
+
 		let response = await fetch("/api/aula/criar", {
 			method: "post",
-			body: new FormData(form)
+			body: JSON.stringify(aula),
+			headers: {
+				"Content-Type": "application/json"
+			}
 		});
 
-		console.log(response.ok);
+		if (response.ok) {
+			Swal.fire("Sucesso!", "Aula criada com sucesso!", "success");
+		} else {
+			let erro = await response.json();
+
+			Swal.fire("Erro!", erro, "error");
+		}
 	}
 
 	$("#formAgendamento").validate({
 		rules: {
-			aula: {
+			idprofessor: {
+				required: true
+			},
+			idaula: {
 				required: true
 			},
 			data: {
-				required: true
-			},
-			hora1: {
-				required: true
-			},
-			hora2: {
 				required: true
 			}
 		},

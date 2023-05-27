@@ -249,7 +249,7 @@
 				let posicaoTopo = elemento.getBoundingClientRect().top
 				let alturaJanela = window.innerHeight
 
-				if (posicaoTopo < alturaJanela * 0.8) {
+				if (posicaoTopo < alturaJanela * 0.8 && window.scrollY > 0) {
 					elemento.classList.add('show')
 				} else {
 					elemento.classList.remove('show')

@@ -17,6 +17,19 @@
 
 O projeto consiste no desenvolvimento de um site de academia que visa facilitar o processo de cadastro e consulta de aulas por parte dos funcionários. O objetivo principal é otimizar a gestão das aulas oferecidas pela academia, permitindo que os funcionários tenham acesso fácil e rápido às informações necessárias.
 
+# Detalhes de Configuração
+
+Para funcionar corretamente, devem ser criados os seguintes arquivos/pastas nos caminhos especificados, com o conteúdo especificado:
+
+- O arquivo `.env` deve ser criado em `/`, com o conteúdo abaixo:
+```
+mysqlhost=localhost
+mysqlport=3306
+mysqluser=[USUÁRIO DO BANCO]
+mysqlpassword=[SENHA DO USUÁRIO DO BANCO]
+mysqldatabase=[NOME DO BANCO]
+```
+
 # Licença
 
 Este projeto é licenciado sob a [MIT License](https://github.com/tech-espm/inter-2sem-2023-academia/blob/main/LICENSE).

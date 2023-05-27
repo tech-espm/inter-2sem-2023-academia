@@ -1,4 +1,5 @@
 ﻿import app = require("teem");
+import Aula = require("../models/aula");
 
 class IndexRoute {
 	public async index(req: app.Request, res: app.Response) {
@@ -17,7 +18,11 @@ class IndexRoute {
 	}
 
 	public async consulta(req: app.Request, res: app.Response) {
-		res.render("index/consulta");
+		let opcoes = {
+			aulas: await Aula.listar()
+		};
+
+		res.render("index/consulta", opcoes);
 	}
 
 	public async agendamento(req: app.Request, res: app.Response) {
