@@ -90,12 +90,14 @@
     background-color: rgba(110, 109, 109, 0.8);
     color: white;
     padding: 10px;
-    max-width: 35rem;
+    max-width: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: left;
-    margin: 0 auto;
     border-radius: 1rem;
+    align-content: left;
+    padding: 2rem;
+    margin-top: 5rem;
 }
 
 .secao3-home {
@@ -106,3 +108,26 @@
     min-height: 100vh;
     box-sizing: border-box;
 }
+
+.secao4-home {
+    background-image: url(/public/imagens/img3home.png);
+    
+    background-size: cover;
+    background-position: center top;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.botao-secao4-home {
+    border-radius: 50px;
+    background-color: rgba(128, 128, 128, 0.6);
+    color: white;
+    padding: 20px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 60rem;
+    margin-top: 40rem;
+    
+  }
+  
