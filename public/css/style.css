@@ -103,10 +103,7 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
-<<<<<<< Updated upstream
-=======
-    
->>>>>>> Stashed changes
+
     border-radius: 1rem;
     align-content: left;
     padding: 2rem;
@@ -116,16 +113,6 @@
 .secao4-home {
     background-image: url(/public/imagens/img3home.png);
     padding: 200px 25px;
-    background-size: cover;
-    background-position: center top;
-    min-height: 100vh;
-    box-sizing: border-box;
-}
-
-<<<<<<< Updated upstream
-.secao4-home {
-    background-image: url(/public/imagens/img3home.png);
-    
     background-size: cover;
     background-position: center top;
     min-height: 100vh;
@@ -142,10 +129,9 @@
     font-size: 2rem;
     margin-left: 60rem;
     margin-top: 40rem;
-    
-  }
-  
-=======
+
+}
+
 .botao-secao4 {
     background-color: rgba(128, 128, 128, 0.8);
     color: #ffffff;
@@ -154,6 +140,3 @@
     border: none;
     text-align: right;
 }
-
-
->>>>>>> Stashed changes
