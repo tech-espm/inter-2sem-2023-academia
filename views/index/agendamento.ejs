@@ -8,19 +8,20 @@
 					<div class="form-group">
 						<label for="idprofessor" class="labels">Professor:</label>
 						<select class="form-control" name="idprofessor" id="idprofessor">
-							<option value="">Selecione o professor:</option>
-							<option value="1">Flavio</option>
+							<option value="" hidden>Selecione o professor:</option>
+							<% for (let i = 0; i < professores.length; i++) { %>
+							<option value="<%= professores[i].idprofessor %>"><%= professores[i].nome %></option>
+							<% } %>
 						</select>
 					</div>
 
 					<div class="form-group">
 						<label for="idtipo" class="labels">Aula:</label>
 						<select class="form-control" name="idtipo" id="idtipo">
-							<option value="">Selecione a aula:</option>
-							<option value="1">Yoga</option>
-							<option value="2">Pilates</option>
-							<option value="3">Spinning</option>
-							<option value="4">Alongamento</option>
+							<option value="" hidden>Selecione a aula:</option>
+							<% for (let i = 0; i < tipos.length; i++) { %>
+							<option value="<%= tipos[i].idtipo %>"><%= tipos[i].nome %></option>
+							<% } %>
 						</select>
 					</div>
 
@@ -69,8 +70,6 @@
 <script src="/public/js/jquery-validate/jquery.validate.min.js"></script>
 <script src="/public/js/jquery-validate/additional-methods.min.js"></script>
 <script src="/public/js/jquery-validate/localization/messages_pt_BR.min.js"></script>
-<script src="sweetalert2.all.min.js"></script>
-
 
 <script>
 	async function cadastrar(form) {
@@ -79,6 +78,8 @@
 			idtipo: document.getElementById("idtipo").value,
 			data: document.getElementById("data").value
 		};
+
+		waitSwal();
 
 		let response = await fetch("/api/aula/criar", {
 			method: "post",
@@ -102,7 +103,7 @@
 			idprofessor: {
 				required: true
 			},
-			idaula: {
+			idtipo: {
 				required: true
 			},
 			data: {

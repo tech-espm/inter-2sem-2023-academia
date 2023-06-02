@@ -1,6 +1,4 @@
-<div>
-
-	<div class="container-fluid secao1-agendamento">
+<div class="container-fluid secao1-agendamento">
 	<div class="row">
 		<div class="col-sm-6">
 			<div id="blocoTextoS1">
@@ -8,13 +6,32 @@
 
 				<form id="formAgendamento" >
 					<div class="form-group">
-						<label for="idprofessorConsulta" class="labels">Professor:</label>
-						<select class="form-control" name="idprofessorConsulta" id="idprofessorConsulta">
-							<option value="">Selecione o professor:</option>
-							<option value="1">Flavio</option>
+						<label for="idprofessor" class="labels">Professor:</label>
+						<select class="form-control" name="idprofessor" id="idprofessor" onchange="atualizarTela()">
+							<option value="" hidden>Selecione o professor:</option>
+							<% for (let i = 0; i < professores.length; i++) { %>
+							<option value="<%= professores[i].idprofessor %>"><%= professores[i].nome %></option>
+							<% } %>
 						</select>
 					</div>
 				</form>
-
-
+			</div>
+		</div>
+	</div>
 </div>
+
+<script>
+	async function atualizarTela() {
+		waitSwal();
+
+		let select = document.getElementById("idprofessor");
+		
+		let response = await fetch("/api/aula/listar?idprofessor=" + select.value);
+
+		let lista = await response.json();
+
+		Swal.close();
+
+		console.log(lista);
+	}
+</script>

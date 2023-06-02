@@ -5,7 +5,7 @@ CREATE TABLE professor (
   idprofessor int NOT NULL AUTO_INCREMENT,
   nome varchar(100) NOT NULL,
   PRIMARY KEY (idprofessor),
-  UNIprofessorQUE KEY professor_nome_UN (nome)
+  UNIQUE KEY professor_nome_UN (nome)
 );
 
 INSERT INTO professor (nome) VALUES ('Flavio'), ('Selmini'), ('Carlos Rafael'), ('Surian'), ('Humberto'), ('Surjan'), ('Renato Mader'), ('Vince Vader');

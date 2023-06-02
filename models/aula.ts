@@ -7,8 +7,23 @@ interface Aula {
     data: string;
 }
 
+interface TipoAula {
+    idtipo: number;
+    nome: string;
+}
+
 class Aula {
-    public static async listar(): Promise<Aula[]> {
+    public static async listarTipos(): Promise<TipoAula[]> {
+        let lista: TipoAula[];
+
+        await app.sql.connect(async (sql: app.Sql) => {
+            lista = await sql.query("SELECT idtipo, nome FROM tipo ORDER BY nome");
+        });
+
+        return lista;
+    }
+
+    public static async listar(idprofessor: number): Promise<Aula[]> {
         let lista: Aula[];
 
         await app.sql.connect(async (sql: app.Sql) => {
@@ -19,8 +34,9 @@ class Aula {
                 FROM aula a
                 INNER JOIN professor p ON p.idprofessor = a.idprofessor
                 INNER JOIN tipo t ON t.idtipo = a.idtipo
+                WHERE a.idprofessor = ?
                 ORDER BY a.data ASC, t.nome ASC
-            `);
+            `, [idprofessor]);
         });
 
         return lista;

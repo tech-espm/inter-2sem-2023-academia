@@ -23,6 +23,10 @@ class AulaApiRoute {
 
 		res.json(resultado);
 	}
+
+	public async listar(req: app.Request, res: app.Response) {
+		res.json(await Aula.listar(parseInt(req.query["idprofessor"] as string)));
+	}
 }
 
 export = AulaApiRoute;
