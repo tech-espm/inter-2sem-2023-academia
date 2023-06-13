@@ -11,24 +11,54 @@
 }
 
 
-.secao1-agendamento {
-    padding: 2rem 3rem;
-    background-image: url(/public/imagens/transferir.jpg);
+.secao1-agendamento,
+.secao1-consulta {
+    background-image: url(/public/imagens/fundoAgendamento.webp);
     min-height: 100vh;
     box-sizing: border-box;
     background-position: center;
     background-size: cover;
 }
 
+.secao1-consulta {
+    background-image: url(/public/imagens/fundoConsulta.webp);
+}
+
 .labels {
     font-weight: bold;
 }
 
-#blocoTextoS1 {
-    padding-top: 5rem;
-    color: whitesmoke;
+#blocoTextoS1,
+#blocoTextoS1Consulta {
+    margin-top: 5rem;
+    padding: 2rem 2rem;
+    color: black;
+    background-color: white;
+    border-radius: 2rem;
 
 }
+
+#blocoTextoS1Consulta {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+#blocoAulas {
+    margin-top: 1rem;
+    padding: 0.5rem 4rem;
+
+}
+
+
+
+.color {
+    border: solid black 1px;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+    padding: 1rem 0.5rem;
+
+}
+
 
 /*HOME PAGE*/
 
