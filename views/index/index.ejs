@@ -1,64 +1,275 @@
-﻿<div class="limitador">
-	
-		
-			<div class="secao1-home">
-				<div class="caixa-texto-home1">
-					<div class="texto1-home">
-						<p>
-							<span class="span1">KRENKS</span> 
-						</p>
-						<h1>
-							Esteja preparado 
-						</h1>
-						<h1>
-							para mudar de vida
-						</h1>
-						<p>
-							scroll down
-						</p>
-					</div>
-					
-				</div>
+﻿<style>
+	.hide {
+		opacity: 0;
+		transition: opacity 3s;
+	}
+
+	.show {
+		opacity: 1;
+		transition: opacity 3s;
+	}
+
+	.scroll-trigger {
+		opacity: 0;
+		transition: opacity 3s;
+	}
+
+	.scroll-trigger.show {
+		opacity: 1;
+	}
+
+	.secao1-home {
+		background-image: url(/public/imagens/img1home.png);
+		padding: 200px 25px;
+		background-size: cover;
+		background-position: center top;
+		min-height: 100vh;
+		box-sizing: border-box;
+	}
+
+	.span1 {
+		color: rgb(79, 79, 255);
+		font-size: 2rem;
+	}
+
+	.caixa-texto-home1 {
+		background-color: rgba(110, 109, 109, 0.8);
+		color: white;
+		padding: 10px;
+		max-width: 35rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto;
+		border-radius: 1rem;
+	}
+
+	.texto1-home {
+		padding-left: 1rem;
+	}
+
+	.secao2-home {
+		align-items: center;
+		text-align: center;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+
+	.secao2-home h1 {
+		color: blue;
+	}
+
+	.span2 {
+		font-size: 4rem;
+	}
+
+	.secao3-home {
+		background-image: url(/public/imagens/img2home.png);
+		padding: 200px 25px;
+		background-size: cover;
+		background-position: center top;
+		min-height: 100vh;
+		box-sizing: border-box;
+	}
+
+	.btn-primary {
+		color: white;
+		background-color: blue;
+		text-align: center;
+		text-transform: uppercase;
+		width: 200px;
+		height: 50px;
+		margin-top: 1rem;
+	}
+
+	.caixa-texto-home2 {
+		background-color: rgba(110, 109, 109, 0.8);
+		color: white;
+		padding: 10px;
+		max-width: 30rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+
+		border-radius: 1rem;
+		align-content: left;
+		padding: 2rem;
+		margin-top: 5rem;
+	}
+
+	.secao4-home {
+		background-image: url(/public/imagens/img3home.png);
+		padding: 200px 25px;
+		background-size: cover;
+		background-position: center top;
+		min-height: 100vh;
+		box-sizing: border-box;
+	}
+
+	.btn-secondary {
+		color: white;
+		cursor: pointer;
+		font-size: 2rem;
+		margin-left: 60rem;
+		margin-top: 40rem;
+
+	}
+
+	.botao-secao4 {
+		background-color: rgba(128, 128, 128, 0.8);
+		color: #ffffff;
+		border-radius: 10px;
+		padding: 10px 20px;
+		border: none;
+		text-align: right;
+	}
+
+	.p1 {
+		margin-top: 2rem;
+		animation: slidedown 1s;
+	}
+
+	@keyframes jumping-letters {
+		0% {
+			transform: scale(1);
+		}
+
+		50% {
+			transform: scale(1.5);
+		}
+
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	.jumping-text {
+		display: inline-block;
+		animation: jumping-letters 1s infinite;
+	}
+
+	.jumping-container {
+		visibility: hidden;
+		animation: show-container 1s 5s forwards;
+	}
+
+	@keyframes show-container {
+		0% {
+			visibility: hidden;
+		}
+
+		100% {
+			visibility: visible;
+		}
+	}
+</style>
+
+<div class="limitador">
+
+	<div class="secao1-home">
+
+		<div class="caixa-texto-home1">
+
+			<div class="texto1-home">
+
+				<p>
+					<span class="span1 jumping-text">KRENKS</span>
+				</p>
+
+				<h1>
+					Esteja preparado
+				</h1>
+
+				<h1>
+					para mudar de vida
+				</h1>
+
+				<p class="p1">
+					scroll down
+				</p>
+
 			</div>
-		
-			<div class="secao2-home">
-				<h1> <span class="span2">PROMOÇÃO!</span> </h1>
-				<p>Mude sua vida e venha para KRENKS!</p>
-				<h1>R$ 85,90 <span>/mês</span> </h1>
-				<button class="button1-home">Se inscreva!</button>
+
+		</div>
+
+	</div>
+
+	<div class="secao2-home scroll-trigger">
+
+		<h1> <span class="span2">PROMOÇÃO!</span> </h1>
+
+		<p>Mude sua vida e venha para KRENKS!</p>
+
+		<h1>R$ 85,90 <span>/mês</span> </h1>
+
+		<button class="btn btn-primary">Se inscreva!</button>
+
+	</div>
+
+	<div class="secao3-home">
+
+		<div class="caixa-texto-home2 scroll-trigger">
+
+			<div class="texto3-home">
+
+				<h2>
+					Transforme seu corpo
+				</h2>
+
+				<h2>
+					e sua vida!
+				</h2>
+
+				<p>
+					Descubra um novo nível de força, resistência e bem-estar.
+					Junte-se a nós e alcance seus objetivos.
+				</p>
+
 			</div>
 
-			<div class="secao3-home">
-				<div class="caixa-texto-home2">
-					<div class="texto3-home">
-						<h2>
-							Transforme seu corpo
-						</h2>
-						<h2>
-							e sua vida! 
-						</h2>
-						<p>
-							Descubra um novo nível de força, resistência e bem-estar. 
-							Junte-se a nós e alcance seus objetivos.				
-						</p>
-					</div>
-					
-				</div>
-			</div>
+		</div>
 
-	
+	</div>
 
 
 
-	<div class="secao2-home">
+
+
+	<div class="secao2-home scroll-trigger">
+
 		<h1> <span class="span2">PROMOÇÃO BOX!</span> </h1>
+
 		<p>Aprenda a arte do BOX!</p>
+
 		<h1>R$ 35,90 <span>/mês</span> </h1>
+
 	</div>
 
 	<div class="secao4-home">
-		<div> <button class="botao-secao4-home">Se inscreva!</button> </div>
+
+		<div> <button class="btn btn-secondary scroll-trigger">Se inscreva!</button> </div>
+
 	</div>
-		
-			
+
+
 </div>
+
+<script>
+
+	window.addEventListener('scroll', function () {
+		let elementos = document.querySelectorAll('.scroll-trigger')
+		for (let i = 0; i < elementos.length; i++) {
+			let elemento = elementos[i]
+			let posicaoTopo = elemento.getBoundingClientRect().top
+			let alturaJanela = window.innerHeight
+
+			if (posicaoTopo < alturaJanela * 0.8 && window.scrollY > 0) {
+				elemento.classList.add('show')
+			} else {
+				elemento.classList.remove('show')
+			}
+		}
+	})
+
+</script>
+</body>

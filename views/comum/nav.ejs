@@ -1,3 +1,45 @@
+<style>
+	.nav-link {
+		animation-duration: 1s;
+		animation-name: slidein;
+	}
+
+	@keyframes slidein {
+		from {
+			margin-left: 100%;
+			width: 300%;
+		}
+
+		to {
+			margin-left: 0%;
+			width: 100%;
+		}
+	}
+
+
+	.nav-link {
+		text-decoration: none;
+		position: relative;
+	}
+
+	.nav-link::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: transparent;
+		transition: width 0.3s ease-in-out;
+	}
+
+	.nav-link:hover:after,
+	.nav-link:active:after {
+		width: 100%;
+		background-color: black;
+	}
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
 
 	<a class="navbar-brand" href="/">
