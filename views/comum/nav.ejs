@@ -15,16 +15,16 @@
 
 		<ul class="navbar-nav nav-pills nav-fill">
 			<li class="nav-item mx-5">
-				<a class="nav-link {{ Request::is('sobre') ? 'active' : '' }} text-dark" href="/sobre">Sobre nós</a>
+				<a class="nav-link text-dark <%- (pagina == 'sobre' ? 'active' : '') %>" href="/sobre">Sobre nós</a>
 			</li>
 
 			<li class="nav-item mx-5">
-				<a class="nav-link {{ Request::is('consulta') ? 'active' : '' }} text-dark"
+				<a class="nav-link text-dark <%- (pagina == 'consulta' ? 'active' : '') %>"
 					href="/consulta">Consulta</a>
 			</li>
 
 			<li class="nav-item mx-5">
-				<a class="nav-link {{ Request::is('agendamento') ? 'active' : '' }} text-dark"
+				<a class="nav-link text-dark <%- (pagina == 'agendamento' ? 'active' : '') %>"
 					href="/agendamento">Agendamento</a>
 			</li>
 		</ul>

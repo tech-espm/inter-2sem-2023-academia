@@ -75,6 +75,7 @@
 
 .span1 {
     color: blue;
+    font-size: 2rem;
 }
 
 .caixa-texto-home1 {
@@ -117,15 +118,14 @@
     box-sizing: border-box;
 }
 
-.button1-home {
+.btn-primary {
     color: white;
     background-color: blue;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 999px;
-    padding: .75rem 1rem;
     width: 200px;
     height: 50px;
+    margin-top: 1rem;
 }
 
 .caixa-texto-home2 {
@@ -152,12 +152,8 @@
     box-sizing: border-box;
 }
 
-.botao-secao4-home {
-    border-radius: 50px;
-    background-color: rgba(128, 128, 128, 0.6);
+.btn-secondary {
     color: white;
-    padding: 20px 30px;
-    border: none;
     cursor: pointer;
     font-size: 2rem;
     margin-left: 60rem;
@@ -172,4 +168,52 @@
     padding: 10px 20px;
     border: none;
     text-align: right;
+}
+
+.nav-link {
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+
+.nav-link {
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+    background-color: black;
+}
+
+.nav-pills .nav-link.active {
+    background: none;
+}
+
+.nav-pills .nav-link.active:after {
+    width: 100%;
+    background-color: black;
 }

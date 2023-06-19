@@ -8,26 +8,31 @@ class IndexRoute {
 
 		let opcoes = {
 			usuario: nomeDoUsuarioQueVeioDoBanco,
-			quantidadeDeRepeticoes: 5
+			quantidadeDeRepeticoes: 5,
+			pagina: "index"
 		};
 
 		res.render("index/index", opcoes);
 	}
 
 	public async sobre(req: app.Request, res: app.Response) {
-		res.render("index/sobre");
+		res.render("index/sobre", {
+			pagina: "sobre"
+		});
 	}
 
 	public async consulta(req: app.Request, res: app.Response) {
 		res.render("index/consulta", {
-			professores: await Professor.listar()
+			professores: await Professor.listar(),
+			pagina: "consulta"
 		});
 	}
 
 	public async agendamento(req: app.Request, res: app.Response) {
 		res.render("index/agendamento", {
 			tipos: await Aula.listarTipos(),
-			professores: await Professor.listar()
+			professores: await Professor.listar(),
+			pagina: "agendamento"
 		});
 	}
 
